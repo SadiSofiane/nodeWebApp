@@ -30,7 +30,7 @@ app.get('/todos', function (req, res) {
 	}
 
 	if (queryParams.hasOwnProperty('q') && queryParams.q.length > 0) {
-        where.description: {
+        where.description = {
             $like: '%' + query.q.toLowerCase() + '%'
         }
 	}
